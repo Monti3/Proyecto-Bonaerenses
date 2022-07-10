@@ -35,7 +35,7 @@ void motor_reverse_partial(uint8_t pin_forward, uint8_t pin_reverse, uint8_t par
  *  @brief  Programa principal
  */
 
-int 
+
 int main(void) 
 {
 
@@ -56,7 +56,11 @@ int main(void)
     ultrasonico_init(12,13); //ULTRASONICO
     gpio_init(16);
     gpio_init(17);
-    gpio_init(18); //LEDS
+    gpio_init(18); 
+    gpio_set_dir(16,1);
+    gpio_set_dir(17,1);
+    gpio_set_dir(18,1);
+    //LEDS
 
 
 
@@ -156,8 +160,8 @@ int main(void)
             else    // si detecta todo blanco, se dobla a la derecha 
             {
 
-                motor_forward_partial(motor1f,motor1b, 60 );        
-                motor_forward_partial(motor2f,motor2b, 30 );
+                motor_forward_partial(motor1f,motor1b, 60);        
+                motor_forward_partial(motor2f,motor2b, 40);
 
             }
             
