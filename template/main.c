@@ -66,7 +66,7 @@ int main(void)
 
     while(1)
     {
-        // inf1: izquierda, inf2: derecha, inf3: adelante 
+        // infL: izquierda, infR: derecha, infA: adelante 
         bool infL = infrarojo_get(1); bool infR = infrarojo_get(2); bool infA = infrarojo_get(3);
         const int motor1f = 9; const int motor1b = 10; // motor izquierdo
         const int motor2f= 27; const int motor2b = 28; // motor derecho
